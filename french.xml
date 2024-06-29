@@ -1,7 +1,7 @@
 #EXTM3U
-#EXTINF:-1 channel-id="samsung-FRBC350000148" tvg-id="FRBC350000148" tvg-logo="https://projatol.000webhostapp.com/logo/tv.jpg" tvg-chno="4161" group-title="Séries TV" , [[COLOR lime][B]FRANCE- Fr[COLOR yellow]][/B][/COLOR]
+#EXTINF:-1 channel-id="samsung-FRBC350000148" tvg-id="FRBC350000148" tvg-logo="https://projatol.000webhostapp.com/logo/tv.jpg" tvg-chno="4161" group-title="Séries TV" ,                                             [[COLOR lime][B]FRANCE- Fr[COLOR yellow]][/B][/COLOR]
 http://google.com
-#EXTINF:-1 channel-id="samsung-FRBC35000014" tvg-id="FRBC350000148" tvg-logo="https://projatol.000webhostapp.com/logo/tv.jpg" tvg-chno="4161" group-title="Séries TV" , [[COLOR magenta][B]Update[COLOR yellow]][/B][/COLOR]
+#EXTINF:-1 channel-id="samsung-FRBC35000014" tvg-id="FRBC350000148" tvg-logo="https://projatol.000webhostapp.com/logo/tv.jpg" tvg-chno="4161" group-title="Séries TV" ,                                               [[COLOR magenta][B]Update[COLOR yellow]][/B][/COLOR]
 http://google.com
 #EXTVLCOPT:network-caching=10000
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",MacGyver
