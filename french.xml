@@ -1,7 +1,5 @@
 #EXTM3U
-tvg-name="tv fr" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/thumb/f/f0/Ch%C3%A9rie_25_logo_2015.svg/51px-Ch%C3%A9rie_25_logo_2015.svg.png" tvg-id="Cherie25.fr" group-title="France",Chérie 25
-
-                                             [[COLOR lime][B]FRANCE- Fr[COLOR yellow]][/B][/COLOR]
+tvg-name="tv fr" tvg-logo="https://github.com/orion374/v3w/blob/main/frtele.png" tvg-id="tv.fr" group-title="France",                                [[COLOR lime][B]FRANCE- Fr[COLOR yellow]][/B][/COLOR]
 http://google.com
 #EXTINF:-1 channel-id="samsung-FRBC35000014" tvg-id="FRBC350000148" tvg-logo="https://imgur.com/a/BVdyugw" tvg-chno="4161" group-title="Séries TV" ,                                               [[COLOR magenta][B]Update[COLOR yellow]][/B][/COLOR]
 http://google.com
