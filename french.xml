@@ -1,7 +1,7 @@
 #EXTM3U
 #EXTINF:-1 tvg-logo="https://projatol.000webhostapp.com/logo/tv.jpg" group-title="vod",[COLOR yellow][B]                                                   [[COLOR lime][B]FRANCE- Fr[COLOR yellow]][/B][/COLOR]
 http://google.com
-#EXTINF:-1 tvg-logo="https://projatol.000webhostapp.com/logo/update.png" group-title="Golfi ",[COLOR yellow][B]                                                       [[COLOR magenta][B]Update[COLOR yellow]][/B][/COLOR]
+#EXTINF:-1 tvg-logo="https://github.com/orion374/v3w/blob/main/up.png" group-title="Golfi ",[COLOR yellow][B]                                                       [[COLOR magenta][B]Update[COLOR yellow]][/B][/COLOR]
 http://google.com
 #EXTVLCOPT:network-caching=10000
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",MacGyver
