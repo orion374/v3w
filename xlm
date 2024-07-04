@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <channels>
+<channel>
+<name>                                                    [B][COLOR red]••[/COLOR][COLOR lime] Uptade[/COLOR][COLOR                                                  cyan][COLOR yellow] :[/COLOR] Juin[COLOR red] -[/COLOR][COLOR yellow] 2024 [/COLOR][COLOR red]••[/COLOR][/B]</name>
+<thumbnail>https://sogetel.000webhostapp.com/3-logo/update.png</thumbnail>
+<externallink>LINK DE OUTRO MENU CHANNEL ou LISTA DE ITENS</externallink>
+<fanart>LINK DO FANART DO ADDON QUE FICA NO FUNDO</fanart>
+<info>portugalkodi.com</info>
+</channel>
 
+<channel>
 <channel>
 <name>[B][COLOR yellow]••[/COLOR] [COLOR red]test[COLOR yellow] •[/COLOR][COLOR lime] Fights[/COLOR][/B]</name>
 <thumbnail>https://sogetel.000webhostapp.com/3-logo/ufc.png</thumbnail>
