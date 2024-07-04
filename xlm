@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<items>
-    
-   <item>
-        <title>NHK - World</title>         
-        <link>rtmp://some/place playpath=nhkworldhd swfUrl="http://player.0.3.6.2.swf" pageUrl="http://nhkworld/r/movie/" swfVfy=true live=true</link>
-        <thumbnail>http://header_logo.gif</thumbnail>
-    </item>
-	
-    <item>
-        <title>BBC World</title>         
-        <link>rtmp://some/place playpath=bbcworld1_en_high.sdp swfUrl="http://some/place/player.swf" pageUrl="http://some/place/10-bbc-world-news-english" swfVfy=true live=true</link>
-        <thumbnail>http://some/place.jpg</thumbnail>
-	
-</items>
+<channels>
+
+<channel>
+<name>[B][COLOR yellow]••[/COLOR] [COLOR red]test[COLOR yellow] •[/COLOR][COLOR lime] Fights[/COLOR][/B]</name>
+<thumbnail>https://sogetel.000webhostapp.com/3-logo/ufc.png</thumbnail>
+<externallink>https://sogetel.000webhostapp.com/1-demarer/fight.png</externallink>
+<fanart>LINK DO FANART DO ADDON QUE FICA NO FUNDO</fanart>
+<info>portugalkodi.com</info>
+</channel>
+
+</channels>
