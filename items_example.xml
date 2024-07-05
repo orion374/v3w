@@ -2,7 +2,7 @@
 
 <items>
 <item>
-<title>Plugin video</title>
+<title>plugin.video.live.streamspro</title>
 <link>no</link>
 
 <regex>
@@ -42,8 +42,19 @@ def GetLSProData(page_data,Cookie_Jar,m):#vbprofi
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 <item>
-<title>[COLOR cyan]JIN TV Program[/COLOR]</title>
+<title>[COLOR cyan][/COLOR]</title>
 <link>$doregex[makelist]</link>
 
 <regex>
@@ -58,20 +69,20 @@ import re
 def GetLSProData(page_data,Cookie_Jar,m):
     return re.findall('(?s)thumb.*?href="(/de/.*?)".*?"img.*?class="name_or_title">(.*?)</span>', page_data)
 ]]></expres>
-<page>http://jintv.net/de/program/</page>
+<page></page>
 <cookieJar></cookieJar>
 </regex>
 
 <regex>
-<name>play</name>
+<name></name>
 <expres><![CDATA[#$pyFunction
 import re
 def GetLSProData(page_data,Cookie_Jar,m):
     #return re.findall('src="(.*?\.MP4.*?)"', page_data)[0] #'|type="video/mp4"'
     return re.findall('src="(.*?\.MP4.*?)"', page_data)[0].replace('&amp;', '&')
 ]]></expres>
-<page>http://jintv.net[makelist.param1]</page>
-<referer>http://jintv.net/de/program/</referer>
+<page></page>
+<referer></referer>
 <cookieJar></cookieJar>
 <agent>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0</agent>
 </regex>
@@ -80,17 +91,17 @@ def GetLSProData(page_data,Cookie_Jar,m):
 
 
 <item>
-<title>TV - Radio</title>
+<title></title>
 <link>no</link>
-<externallink>http://vbprofi.lima-city.de/xml4/tvradio.xml</externallink>
+<externallink></externallink>
 </item>
 
 
 
 
 <item>
-<title>[COLOR red]Radio Dengê Çira Şengalê[/COLOR]</title>
-<link>http://212.83.138.48:8208</link>
+<title></title>
+<link></link>
 <info>
 Dengê Çira Şengalê
 von 7 bis 21 Uhr Ortszeit
@@ -108,46 +119,43 @@ http://cira.fm/player/player.js?build=12000
 
 
 <item>
-<title>[COLOR red]Radio Dengê Welat[/COLOR]</title>
-<link>$doregex[play]</link>
+<title></title>
+<link></link>
 
 <regex>
-<name>play</name>
-<expres>src="(.*?p3)"</expres>
-<page>http://www.denge-welat.org/</page>
+<name></name>
+<expres></expres>
+<page></page>
 <cookieJar></cookieJar>
 </regex>
 </item>
 
 
 <item>
-<title>[COLOR red]Medya haber TV[/COLOR]</title>
-<link>plugin://plugin.video.youtube/play/?video_id=9IXhDHAFKnk</link>
-<link>https://muzkurd.com/Medya/live15/playlist.m3u8</link>
+<title></title>
+<link></link>
+<link></link>
 <!--
-<link>https://602ccc850c9bb.streamlock.net/Medya/smil:1280.smil/playlist.m3u8</link>
-<link>http://137.74.205.201:80/Medya/medyatv/playlist.m3u8</link>
+<link></link>
+<link></link>
 $$LSPlayOnlyOne$$
-<link>http://137.74.205.201/live15/live15.m3u8|User-Agent=iPhone$$lsname=360P</link>
-<link>http://137.74.205.201/live15/live15.m3u8?_=1|User-Agent=iPhone$$lsname=360P 1</link>
-<link>http://137.74.205.201/live15/live15.m3u8?_=2|User-Agent=iPhone$$lsname=360P 2</link>
+<link></link>
+<link></link>
+<link></link>
 -->
 <agent>Mozilla/5.0 (iPhone; CPU iPhone OS 9_2 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/47.0.2526.70 Mobile/13C71 Safari/601.1.46</agent>
 <cookieJar></cookieJar>
 </item>
 
 <item>
-<title>[COLOR red]sterk TV[/COLOR]</title>
-<link>plugin://plugin.video.youtube/play/?video_id=eAvuXrJQMBU</link>
-<link>https://602ccc850c9bb.streamlock.net/sterktv/smil:sterk.smil/playlist.m3u8</link>
+<title></title>
+<link></link>
+<link></link>
 <!--
-<link>http://137.74.205.201:80/sterktv/sterk/playlist.m3u8</link>
+<link></link>
 $$LSPlayOnlyOne$$
-<link>http://137.74.205.201/live24/live24.m3u8|User-Agent=iPhone$$lsname=720P</link>
-<link>http://137.74.205.201/live23/live23.m3u8|User-Agent=iPhone$$lsname=480P$$LSPlayOnlyOne$$</link>
-<link>http://137.74.205.201/live22/live22.m3u8|User-Agent=iPhone$$lsname=240P$$LSPlayOnlyOne$$</link>
-<link>http://137.74.205.201/live2/sterk-3mbps.m3u8|User-Agent=iPhone$$lsname=360P$$LSPlayOnlyOne$$</link>
-<link>http://137.74.205.201/live21/live21.m3u8|User-Agent=iPhone$$lsname=144P$$LSPlayOnlyOne$$</link>
+<link></link>
+
 -->
 <agent>Mozilla/5.0 (iPhone; CPU iPhone OS 9_2 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/47.0.2526.70 Mobile/13C71 Safari/601.1.46</agent>
 <cookieJar></cookieJar>
@@ -156,9 +164,9 @@ $$LSPlayOnlyOne$$
 
 
 <item>
-<title>[COLOR red]JIN TV[/COLOR]</title>
-<link>https://live.jintv.org:12443/medialive/jintv.m3u8</link>
-<!-- <link>http://live.jintv.org:12335/medialive/jintv.m3u8|type=application/x-mpegurl</link> -->
+<title>/title>
+<link></link>
+<!-- <link></link> -->
 <info>Homepage:
 https://jintv.net/
 </info>
@@ -170,11 +178,11 @@ https://jintv.net/
 
 
 <item>
-<title>[COLOR red]Med Muzîk TV[/COLOR]</title>
+<title></title>
 <!--
-<link>http://137.74.205.201/live3/mm-3mbps.m3u8</link>
+<link></link>
 -->
-<link>http://137.74.205.201/medmuzik/MedStream/playlist.m3u8</link>
+<link></link>
 <info>Med Muzîk – Deng û Rengên Mezopotamya
 Homepage:
 http://medmuzik.tv/
@@ -184,21 +192,21 @@ http://medmuzik.tv/
 
 
 <item>
-<title>[COLOR red]Ronahî TV[/COLOR]</title>
+<title></title>
 <link>$doregex[m5]|User-Agent=Mozilla/5.0&amp;Accept=*/*&amp;Origin=https://karwan.tv&amp;Referer=https://karwan.tv/live/cira-tv-1.php</link>
 <regex>
 <name>m5</name>
 <expres><![CDATA["(https://live.karwan.tv/.*?m3u8.*?)"]]></expres>
 <!-- <expres>source[\w\W]*?src="([^"]+)</expres> -->
-<page>https://karwan.tv/live/ronahi-tv.php</page>
-<connection>keep-alive</connection>
+<page></page>
+<connection></connection>
 <agent>Mozilla/5.0</agent>
-<accept>text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</accept>
-<referer>https://live-tv-channels.org/</referer>
+<accept></accept>
+<referer></referer>
 </regex>
 
 <regex>
-<name>getUrl</name>
+<name></name>
 <expres><![CDATA[#$pyFunction
 import re,requests
 def GetLSProData(page_data,Cookie_Jar,m):
@@ -213,19 +221,19 @@ def GetLSProData(page_data,Cookie_Jar,m):
 
 
 <item>
-<title>[COLOR red]Arti TV[/COLOR]</title>
+<title></title>
 <fanart></fanart>
 <thumbnail></thumbnail>
-<link>plugin://plugin.video.youtube/play/?video_id=du6wPiZtE2s</link>
-<link>$doregex[m5]|User-Agent=Mozilla/5.0&amp;Accept=*/*&amp;Origin=https://karwan.tv&amp;Referer=https://karwan.tv/live/arti-tv.php</link>
+<link></link>
+<link></link>
 <regex>
 <name>m5</name>
-<expres>source[\w\W]*?src="([^"]+)</expres>
-<page>https://karwan.tv/live/arti-tv.php</page>
-<connection>keep-alive</connection>
-<agent>Mozilla/5.0</agent>
-<accept>text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</accept>
-<referer>https://live-tv-channels.org/</referer>
+<expres></expres>
+<page></page>
+<connection></connection>
+<agent></agent>
+<accept></accept>
+<referer></referer>
 </regex>
 </item>
 
@@ -233,24 +241,24 @@ def GetLSProData(page_data,Cookie_Jar,m):
 
 
 <item>
-<title>[COLOR red]Zarok TV[/COLOR]</title>
+<title></title>
 <fanart></fanart>
 <thumbnail></thumbnail>
-<link>$doregex[m5]|User-Agent=Mozilla/5.0&amp;Accept=*/*&amp;Origin=https://karwan.tv&amp;Referer=https://karwan.tv/zarok-tv.html</link>
-<!-- <link>$doregex[getUrl]</link> -->
+<link></link>
+<!-- <link></link> -->
 <regex>
 <name>m5</name>
-<expres><![CDATA["(https://live.karwan.tv/.*?m3u8.*?)"]]></expres>
+<expres></expres>
 <!-- <expres>file: "([^"]+)</expres> -->
-<page>https://karwan.tv/live/zarok-tv-ku.php</page>
-<connection>keep-alive</connection>
-<agent>Mozilla/5.0</agent>
-<accept>text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</accept>
-<referer>https://live-tv-channels.org/</referer>
+<page></page>
+<connection></connection>
+<agent></agent>
+<accept></accept>
+<referer></referer>
 </regex>
 
 <regex>
-<name>getUrl</name>
+<name></name>
 <expres><![CDATA[#$pyFunction
 import re,requests
 def GetLSProData(page_data,Cookie_Jar,m):
@@ -265,18 +273,18 @@ def GetLSProData(page_data,Cookie_Jar,m):
 
 
 <item>
-<title>[COLOR red]Can TV[/COLOR]</title>
+<title></title>
 <fanart></fanart>
 <thumbnail></thumbnail>
-<link>$doregex[m5]|User-Agent=Mozilla/5.0&amp;Accept=*/*&amp;Origin=https://karwan.tv&amp;Referer=https://karwan.tv/live/can-tv.php</link>
+<link></link>
 <regex>
-<name>m5</name>
-<expres>source[\w\W]*?src="([^"]+)</expres>
-<page>https://karwan.tv/live/can-tv.php</page>
-<connection>keep-alive</connection>
-<agent>Mozilla/5.0</agent>
-<accept>text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</accept>
-<referer>https://live-tv-channels.org/</referer>
+<name></name>
+<expres></expres>
+<page></page>
+<connection></connection>
+<agent></agent>
+<accept></accept>
+<referer></referer>
 </regex>
 </item>
 
@@ -284,18 +292,18 @@ def GetLSProData(page_data,Cookie_Jar,m):
 
 
 <item>
-<title>[COLOR red]Yol TV[/COLOR]</title>
+<title></title>
 <fanart></fanart>
 <thumbnail></thumbnail>
-<link>$doregex[m5]|User-Agent=Mozilla/5.0&amp;Accept=*/*&amp;Origin=https://karwan.tv&amp;Referer=https://karwan.tv/live/yol-tv.php</link>
+<link></link>
 <regex>
 <name>m5</name>
-<expres>source[\w\W]*?src="([^"]+)</expres>
-<page>https://karwan.tv/live/yol-tv.php</page>
-<connection>keep-alive</connection>
-<agent>Mozilla/5.0</agent>
-<accept>text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</accept>
-<referer>https://live-tv-channels.org/</referer>
+<expres></expres>
+<page></page>
+<connection></connection>
+<agent></agent>
+<accept></accept>
+<referer></referer>
 </regex>
 </item>
 
@@ -303,15 +311,15 @@ def GetLSProData(page_data,Cookie_Jar,m):
 
 
 <item>
-<title>[COLOR cyan]Kurdistan TVs[/COLOR] karwan.tv</title>
-<link>$doregex[makelist]</link>
+<title></title>
+<link></link>
 
 <regex>
-<name>makelist</name>
+<name></name>
 <listrepeat><![CDATA[
-<title>[COLOR cyan][makelist.param2][/COLOR]</title>
-  <link>$doregex[getURL]</link>
-<thumbnail>[makelist.param3]</thumbnail>
+<title></title>
+  <link></link>
+<thumbnail></thumbnail>
 ]]></listrepeat>
 <expres><![CDATA[#$pyFunction
 import re, requests
@@ -347,12 +355,12 @@ def GetLSProData(page_data,Cookie_Jar,m):
 
  return myorder
 ]]></expres>
-<page>https://karwan.tv/</page>
+<page></page>
 <cookieJar></cookieJar>
-<connection>keep-alive</connection>
-<agent>Mozilla/5.0</agent>
-<accept>text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</accept>
-<referer>https://live-tv-channels.org/</referer>
+<connection></connection>
+<agent></agent>
+<accept></accept>
+<referer></referer>
 </regex>
 
 <regex>
@@ -383,43 +391,43 @@ def GetLSProData(page_data,Cookie_Jar,m):
 
 <!--
 <item>
-<title>[COLOR cyan]Türkei TVs[/COLOR]</title>
-<link>ingoreme</link>
-<externallink>https://pastebin.com/raw/ZHA7ktRG</externallink>
-<externallink>https://vbprofi.lima-city.de/xml3/tr.xml</externallink>
+<title></title>
+<link></link>
+<externallink></externallink>
+<externallink></externallink>
 </item>
 -->
 
 
 
  <item>
-    <title>[COLOR cyan]Deutschland TVs - Radios[/COLOR]</title>
-<link>ignoreme</link>
-<externallink>https://vbprofi.lima-city.de/xml4/deu.xml</externallink>
+    <title></title>
+<link></link>
+<externallink></externallink>
 </item>
 
 
 
 
 <item>
-<title>[COLOR lime][B]   RSS     [/B][/COLOR]</title>
-<link>no</link>
+<title></title>
+<link></link>
 </item>
 
 
 
 
 <item>
-<title>[COLOR cyan]ANF türkçe[/COLOR]</title>
-<link>$doregex[main]</link>
+<title></title>
+<link></link>
 
 <regex>
-<name>main</name>
+<name></name>
 <listrepeat><![CDATA[
-<title>[COLOR cyan] [main.param1] - [main.param4] [/COLOR]</title>
+<title></title>
 <link>no</link>
-<externallink>$doregex[text]</externallink>
-<info>$doregex[text]</info>
+<externallink></externallink>
+<info></info>
 ]]></listrepeat>
 <expres><![CDATA[#$pyFunction
 import re
@@ -475,15 +483,15 @@ def GetLSProData(page_data,Cookie_Jar,m):#vbprofi
 
 
 <item>
-<title>[COLOR cyan]ANF deutsch[/COLOR]</title>
-<link>$doregex[main]</link>
+<title></title>
+<link></link>
 
 <regex>
-<name>main</name>
+<name></name>
 <listrepeat><![CDATA[
-<title>[COLOR cyan] [main.param1] - [main.param4] [/COLOR]</title>
-<link>no</link>
-<externallink>$doregex[text]</externallink>
+<title></title>
+<link></link>
+<externallink></externallink>
 ]]></listrepeat>
 <expres><![CDATA[#$pyFunction
 import re
@@ -512,7 +520,7 @@ def GetLSProData(page_data,Cookie_Jar,m):#vbprofi
 </regex>
 
 <regex>
-<name>text</name>
+<name></name>
 <expres><![CDATA[#$pyFunction
 import xbmcgui
 import re
@@ -539,11 +547,11 @@ def GetLSProData(page_data,Cookie_Jar,m):#vbprofi
 
 
 <item>
-<title>[COLOR cyan]deutsche Sender Programmvorschau[/COLOR]</title>
-<link>$doregex[tag]</link>
+<title></title>
+<link></link>
 
 <regex>
-<name>tag</name>
+<name></name>
 <listrepeat><![CDATA[
 <title>[tag.param2]</title>
 <link>$doregex[sender]</link>
@@ -553,7 +561,7 @@ import re
 def GetLSProData(page_data,Cookie_Jar,m):#vbprofi
  return re.findall('<OPTION.*?VALUE="(.*?)".*?>(.*?)</OPTION>', re.findall("ID='wochentag'(?s)(.*?)</SELECT><SELECT ID='sender'", page_data)[0])
 ]]></expres>
-<page>https://www.hoerzu.de/text/tv-programm/sender.php</page>
+<page></page>
 </regex>
 
 <regex>
@@ -604,16 +612,16 @@ def cleanhtml(raw_html):
  cleantext = re.sub(cleanr, '\n', raw_html)
  return cleantext.replace('&nbsp;', ' ')
 ]]></expres>
-<page>https://www.hoerzu.de/text/tv-programm/[makelist.param1]</page>
+<page></page>
 </regex>
 </item>
 
 
 <!--
 <item>
-<title>login</title>
-<link>n/a</link>
-<externallink>https://vbprofi.lima-city.de/xml3/login.xml</externallink>
+<title></title>
+<link></link>
+<externallink></externallink>
 </item>
 -->
 
