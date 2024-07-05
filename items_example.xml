@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<items>
+<item>
+<title>Plugin video</title>
+<link>no</link>
+
+<regex>
+<name>ip</name>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#vbprofi
+ ip = re.findall('Deine IP.*?b>(.*?)<br' , page_data)[0]
+ land = re.findall('Deine IP.*?b>.*?br>(.*?)<h1', page_data)[0]
+ return ip + ' ' + land
+]]></expres>
+<!-- <expres>Deine IP.*?b(.*?)br(.*?)h1</expres> -->
+<page>https://vbprofi.lima-city.de/</page>
+</regex>
+</item>
+
+
+
+
+<item>
+<title>[COLOR lime][B]   CANASAT    [/B][/COLOR]</title>
+<link>no</link>
+<externallink>https://vbprofi.lima-city.de/xml4/mediathek.xml</externallink>
+</item>
+
+<item>
+<title>[COLOR lime][B]   CANASAT    [/B][/COLOR]</title>
+<link>no</link>
+<externallink>https://vbprofi.lima-city.de/xml4/mediathek.xml</externallink>
+</item>
+
+<item>
+<title>[COLOR lime][B]   CANASAT    [/B][/COLOR]</title>
+<link>no</link>
+<externallink>https://vbprofi.lima-city.de/xml4/mediathek.xml</externallink>
+</item>
+
+
+
+<item>
+<title>[COLOR cyan]JIN TV Program[/COLOR]</title>
+<link>$doregex[makelist]</link>
+
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR cyan] [makelist.param2] [/COLOR]</title>
+<link>$doregex[play]|referer=http://jintv.net[makelist.param1]</link>
+<thumbnail>n/a</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):
+    return re.findall('(?s)thumb.*?href="(/de/.*?)".*?"img.*?class="name_or_title">(.*?)</span>', page_data)
+]]></expres>
+<page>http://jintv.net/de/program/</page>
+<cookieJar></cookieJar>
+</regex>
+
+<regex>
+<name>play</name>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):
+    #return re.findall('src="(.*?\.MP4.*?)"', page_data)[0] #'|type="video/mp4"'
+    return re.findall('src="(.*?\.MP4.*?)"', page_data)[0].replace('&amp;', '&')
+]]></expres>
+<page>http://jintv.net[makelist.param1]</page>
+<referer>http://jintv.net/de/program/</referer>
+<cookieJar></cookieJar>
+<agent>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0</agent>
+</regex>
+</item>
+
+
+
+<item>
+<title>TV - Radio</title>
+<link>no</link>
+<externallink>http://vbprofi.lima-city.de/xml4/tvradio.xml</externallink>
+</item>
+
+
+
+
+<item>
+<title>[COLOR red]Radio Dengê Çira Şengalê[/COLOR]</title>
+<link>http://212.83.138.48:8208</link>
+<info>
+Dengê Çira Şengalê
+von 7 bis 21 Uhr Ortszeit
+
+Homepage: http://cira.fm/
+
+Direkte Seite:
+http://cira.fm/player/
+
+Shutcast link zu finden in:
+http://cira.fm/player/player.js?build=12000
+</info>
+</item>
+
+
+
+<item>
+<title>[COLOR red]Radio Dengê Welat[/COLOR]</title>
+<link>$doregex[play]</link>
+
+<regex>
+<name>play</name>
+<expres>src="(.*?p3)"</expres>
+<page>http://www.denge-welat.org/</page>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+
+<item>
+<title>[COLOR red]Medya haber TV[/COLOR]</title>
+<link>plugin://plugin.video.youtube/play/?video_id=9IXhDHAFKnk</link>
+<link>https://muzkurd.com/Medya/live15/playlist.m3u8</link>
+<!--
+<link>https://602ccc850c9bb.streamlock.net/Medya/smil:1280.smil/playlist.m3u8</link>
+<link>http://137.74.205.201:80/Medya/medyatv/playlist.m3u8</link>
+$$LSPlayOnlyOne$$
+<link>http://137.74.205.201/live15/live15.m3u8|User-Agent=iPhone$$lsname=360P</link>
+<link>http://137.74.205.201/live15/live15.m3u8?_=1|User-Agent=iPhone$$lsname=360P 1</link>
+<link>http://137.74.205.201/live15/live15.m3u8?_=2|User-Agent=iPhone$$lsname=360P 2</link>
+-->
+<agent>Mozilla/5.0 (iPhone; CPU iPhone OS 9_2 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/47.0.2526.70 Mobile/13C71 Safari/601.1.46</agent>
+<cookieJar></cookieJar>
+</item>
+
+<item>
+<title>[COLOR red]sterk TV[/COLOR]</title>
+<link>plugin://plugin.video.youtube/play/?video_id=eAvuXrJQMBU</link>
+<link>https://602ccc850c9bb.streamlock.net/sterktv/smil:sterk.smil/playlist.m3u8</link>
+<!--
+<link>http://137.74.205.201:80/sterktv/sterk/playlist.m3u8</link>
+$$LSPlayOnlyOne$$
+<link>http://137.74.205.201/live24/live24.m3u8|User-Agent=iPhone$$lsname=720P</link>
+<link>http://137.74.205.201/live23/live23.m3u8|User-Agent=iPhone$$lsname=480P$$LSPlayOnlyOne$$</link>
+<link>http://137.74.205.201/live22/live22.m3u8|User-Agent=iPhone$$lsname=240P$$LSPlayOnlyOne$$</link>
+<link>http://137.74.205.201/live2/sterk-3mbps.m3u8|User-Agent=iPhone$$lsname=360P$$LSPlayOnlyOne$$</link>
+<link>http://137.74.205.201/live21/live21.m3u8|User-Agent=iPhone$$lsname=144P$$LSPlayOnlyOne$$</link>
+-->
+<agent>Mozilla/5.0 (iPhone; CPU iPhone OS 9_2 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/47.0.2526.70 Mobile/13C71 Safari/601.1.46</agent>
+<cookieJar></cookieJar>
+</item>
+
+
+
+<item>
+<title>[COLOR red]JIN TV[/COLOR]</title>
+<link>https://live.jintv.org:12443/medialive/jintv.m3u8</link>
+<!-- <link>http://live.jintv.org:12335/medialive/jintv.m3u8|type=application/x-mpegurl</link> -->
+<info>Homepage:
+https://jintv.net/
+</info>
+<agent>Mozilla/5.0 (iPhone; CPU iPhone OS 9_2 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/47.0.2526.70 Mobile/13C71 Safari/601.1.46</agent>
+<cookieJar></cookieJar>
+</item>
+
+
+
+
+<item>
+<title>[COLOR red]Med Muzîk TV[/COLOR]</title>
+<!--
+<link>http://137.74.205.201/live3/mm-3mbps.m3u8</link>
+-->
+<link>http://137.74.205.201/medmuzik/MedStream/playlist.m3u8</link>
+<info>Med Muzîk – Deng û Rengên Mezopotamya
+Homepage:
+http://medmuzik.tv/
+</info>
+</item>
+
+
+
+<item>
+<title>[COLOR red]Ronahî TV[/COLOR]</title>
+<link>$doregex[m5]|User-Agent=Mozilla/5.0&amp;Accept=*/*&amp;Origin=https://karwan.tv&amp;Referer=https://karwan.tv/live/cira-tv-1.php</link>
+<regex>
+<name>m5</name>
+<expres><![CDATA["(https://live.karwan.tv/.*?m3u8.*?)"]]></expres>
+<!-- <expres>source[\w\W]*?src="([^"]+)</expres> -->
+<page>https://karwan.tv/live/ronahi-tv.php</page>
+<connection>keep-alive</connection>
+<agent>Mozilla/5.0</agent>
+<accept>text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</accept>
+<referer>https://live-tv-channels.org/</referer>
+</regex>
+
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):
+  source = requests.get('https://karwan.tv/ronahi-tv.html', headers={'user-agent':'Mozilla/5.0', 'referer':'https://karwan.tv/ronahi-tv.html', 'accept':'*/*'},verify=False).text.replace('\\', '')
+  strurl = re.findall('"(https://live.karwan.tv/.*?m3u8.*?)"', source)[0]
+  return ('%s|user-agent=ipad&origin=https://karwan.tv/ronahi-tv.html&referer=https://karwan.tv/ronahi-tv.html' % strurl)
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+
+<item>
+<title>[COLOR red]Arti TV[/COLOR]</title>
+<fanart></fanart>
+<thumbnail></thumbnail>
+<link>plugin://plugin.video.youtube/play/?video_id=du6wPiZtE2s</link>
+<link>$doregex[m5]|User-Agent=Mozilla/5.0&amp;Accept=*/*&amp;Origin=https://karwan.tv&amp;Referer=https://karwan.tv/live/arti-tv.php</link>
+<regex>
+<name>m5</name>
+<expres>source[\w\W]*?src="([^"]+)</expres>
+<page>https://karwan.tv/live/arti-tv.php</page>
+<connection>keep-alive</connection>
+<agent>Mozilla/5.0</agent>
+<accept>text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</accept>
+<referer>https://live-tv-channels.org/</referer>
+</regex>
+</item>
+
+
+
+
+<item>
+<title>[COLOR red]Zarok TV[/COLOR]</title>
+<fanart></fanart>
+<thumbnail></thumbnail>
+<link>$doregex[m5]|User-Agent=Mozilla/5.0&amp;Accept=*/*&amp;Origin=https://karwan.tv&amp;Referer=https://karwan.tv/zarok-tv.html</link>
+<!-- <link>$doregex[getUrl]</link> -->
+<regex>
+<name>m5</name>
+<expres><![CDATA["(https://live.karwan.tv/.*?m3u8.*?)"]]></expres>
+<!-- <expres>file: "([^"]+)</expres> -->
+<page>https://karwan.tv/live/zarok-tv-ku.php</page>
+<connection>keep-alive</connection>
+<agent>Mozilla/5.0</agent>
+<accept>text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</accept>
+<referer>https://live-tv-channels.org/</referer>
+</regex>
+
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):
+  source = requests.get('https://karwan.tv/zarok-tv.html',headers={'user-agent':'Mozilla/5.0','referer':'https://karwan.tv/zarok-tv.html','accept':'*/*'},verify=False).text.replace('\\', '')
+  strurl = re.findall('"data":.+?src":"([^"]+)', source)[0]
+  return ('%s|user-agent=ipad&origin=https://karwan.tv/zarok-tv.html&referer=https://karwan.tv/zarok-tv.html' % strurl)
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+
+<item>
+<title>[COLOR red]Can TV[/COLOR]</title>
+<fanart></fanart>
+<thumbnail></thumbnail>
+<link>$doregex[m5]|User-Agent=Mozilla/5.0&amp;Accept=*/*&amp;Origin=https://karwan.tv&amp;Referer=https://karwan.tv/live/can-tv.php</link>
+<regex>
+<name>m5</name>
+<expres>source[\w\W]*?src="([^"]+)</expres>
+<page>https://karwan.tv/live/can-tv.php</page>
+<connection>keep-alive</connection>
+<agent>Mozilla/5.0</agent>
+<accept>text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</accept>
+<referer>https://live-tv-channels.org/</referer>
+</regex>
+</item>
+
+
+
+
+<item>
+<title>[COLOR red]Yol TV[/COLOR]</title>
+<fanart></fanart>
+<thumbnail></thumbnail>
+<link>$doregex[m5]|User-Agent=Mozilla/5.0&amp;Accept=*/*&amp;Origin=https://karwan.tv&amp;Referer=https://karwan.tv/live/yol-tv.php</link>
+<regex>
+<name>m5</name>
+<expres>source[\w\W]*?src="([^"]+)</expres>
+<page>https://karwan.tv/live/yol-tv.php</page>
+<connection>keep-alive</connection>
+<agent>Mozilla/5.0</agent>
+<accept>text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</accept>
+<referer>https://live-tv-channels.org/</referer>
+</regex>
+</item>
+
+
+
+
+<item>
+<title>[COLOR cyan]Kurdistan TVs[/COLOR] karwan.tv</title>
+<link>$doregex[makelist]</link>
+
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR cyan][makelist.param2][/COLOR]</title>
+  <link>$doregex[getURL]</link>
+<thumbnail>[makelist.param3]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re, requests
+from operator import itemgetter, attrgetter
+def GetLSProData(page_data,Cookie_Jar,m):
+ source = requests.get('https://karwan.tv/', headers={'user-agent':'Mozilla/5.0', 'referer':'https://karwan.tv/', 'accept':'*/*'},verify=False).text.replace('\\', '')
+ for i in range(2, 5):
+  source = source + requests.get('https://karwan.tv/page/' + str(i), headers={'user-agent':'Mozilla/5.0', 'referer':'https://karwan.tv/', 'accept':'*/*'},verify=False).text.replace('\\', '')
+
+ #strurl = re.findall('"(https://live.karwan.tv/.*?m3u8.*?)"', source)[0]
+ # items = re.findall('class="bt-inner".+?title="\s*([^"]+)\s*".+?href="([^"]+).+?src="([^"]+)', page_data,re.DOTALL)
+ # items = re.findall('<a href="(.*?)"><img.*?src="(.*?)".*?alt="(.*?)"', page_data, re.DOTALL)
+ # items = re.findall('<a href="([^"]+)"><img.*?src="(.*?)".*?alt="(.*?)"', page_data, re.DOTALL)
+ #items = re.findall('href="(.*?)".*?<img.*?src="(.*?)".*?alt="(.*?)"', page_data, re.DOTALL)
+ #items = re.findall('vb-itemthumb.*?href="(.*?)".*?<img.*?src="(.*?)".*?alt="(.*?)"', page_data, re.DOTALL)
+
+ #items = re.findall('itemprop\="thumbnailUrl" content\="(.*?)".*?<h2 class.*?href\="(.*?)" title\="(.*?)".*?</h2>', source, re.DOTALL) #(?s)
+ items = re.findall('(?s)<a href="(.*?)" title="(.*?)".*?alt="(.*?).*?</a>', source, re.DOTALL) #(?s)
+
+ mylist = ['Ronah', 'Medya', 'ira', 'rk tv', 'Aryen', 'JIN', 'Zarok', 'Med M', 'Arti', 'Can', 'Yol']
+ chs = []
+
+ for url, title, thumb in items:
+  if any([x.lower() in title.lower() for x in mylist]):
+   title = '00' + title
+  else:
+   title = '99' + title
+  chs.append((url, title, thumb))
+
+ myorder = []
+ for url, title, thumb in sorted(chs, reverse=False, key=itemgetter(1)):
+  myorder.append((url, title[2:], thumb))
+
+ return myorder
+]]></expres>
+<page>https://karwan.tv/</page>
+<cookieJar></cookieJar>
+<connection>keep-alive</connection>
+<agent>Mozilla/5.0</agent>
+<accept>text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</accept>
+<referer>https://live-tv-channels.org/</referer>
+</regex>
+
+<regex>
+<name>getURL</name>
+<expres><![CDATA[#$pyFunction
+import re, requests
+def GetLSProData(page_data,Cookie_Jar,m):
+  url = '[makelist.param1]'
+  source = requests.get(url, headers={'user-agent':'Mozilla/5.0', 'referer':url, 'accept':'*/*'},verify=False).text.replace('\\', '')
+
+  if 'vp-embed-2 multi-sources' in source:
+    url = 'https://karwan.tv' + re.findall('vp-embed-2 multi-sources.*?src="(.*?)"', source)[0]
+    source = requests.get(url, headers={'user-agent':'Mozilla/5.0', 'referer':url, 'accept':'*/*'},verify=False).text.replace('\\', '')
+  elif 'data-wpfc-original-src="' in source:
+    url = 'https://karwan.tv' + re.findall('data-wpfc-original-src="(.*?)"', source)[0]
+    source = requests.get(url, headers={'user-agent':'Mozilla/5.0', 'referer':url, 'accept':'*/*'},verify=False).text.replace('\\', '')
+  else:
+    strurl = re.findall('"(https://live.karwan.tv/.*?m3u8.*?)"', source)[0]
+
+  strurl = re.findall('"(https://live.karwan.tv/.*?m3u8.*?)"', source)[0]
+  return strurl +'|user-agent=ipad&origin='+ url +'&referer='+ url
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+
+<!--
+<item>
+<title>[COLOR cyan]Türkei TVs[/COLOR]</title>
+<link>ingoreme</link>
+<externallink>https://pastebin.com/raw/ZHA7ktRG</externallink>
+<externallink>https://vbprofi.lima-city.de/xml3/tr.xml</externallink>
+</item>
+-->
+
+
+
+ <item>
+    <title>[COLOR cyan]Deutschland TVs - Radios[/COLOR]</title>
+<link>ignoreme</link>
+<externallink>https://vbprofi.lima-city.de/xml4/deu.xml</externallink>
+</item>
+
+
+
+
+<item>
+<title>[COLOR lime][B]   RSS     [/B][/COLOR]</title>
+<link>no</link>
+</item>
+
+
+
+
+<item>
+<title>[COLOR cyan]ANF türkçe[/COLOR]</title>
+<link>$doregex[main]</link>
+
+<regex>
+<name>main</name>
+<listrepeat><![CDATA[
+<title>[COLOR cyan] [main.param1] - [main.param4] [/COLOR]</title>
+<link>no</link>
+<externallink>$doregex[text]</externallink>
+<info>$doregex[text]</info>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+import HTMLParser
+import sys
+reload(sys)
+sys.setdefaultencoding("utf-8")
+def GetLSProData(page_data,Cookie_Jar,m):#vbprofi
+ parser = HTMLParser.HTMLParser()
+ s = re.sub("(&.+?;)", lambda m: parser.unescape(m.group()), page_data)
+ s1 = re.findall(r'(?s)<item>\n<title>(.*?)</title>\n<description>(.*?)</description>\n<link>(.*?)</link>\n<pubDate>(.*?)</pubDate>\n<guid>(.*?)</guid>\n</item>', s)
+
+ return s1
+]]></expres>
+<page>https://vbprofi.lima-city.de/rss/index.php</page>
+<agent>Mozilla/5.0 (iPhone; CPU iPhone OS 9_2 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/47.0.2526.70 Mobile/13C71 Safari/601.1.46</agent>
+<cookieJar></cookieJar>
+<!--
+<page>https://anfturkce.com/feed.rss</page>
+<page>https://vbprofi.lima-city.de/rss/index.php</page>
+<referer>https://vbprofi.lima-city.de/rss/index.php</referer>
+<Accept>text/html, application/xhtml+xml, image/jxr, */*</Accept>
+<Connection>keep-alive</Connection>
+<keep-alive></keep-alive>
+<noredirect>false</noredirect>
+<includeheaders/>
+-->
+</regex>
+
+<regex>
+<name>text</name>
+<expres><![CDATA[#$pyFunction
+import xbmcgui
+import re
+import HTMLParser
+
+def GetLSProData(page_data,Cookie_Jar,m):#vbprofi
+
+ txt = """'[main.param2]'"""
+ txt = txt.strip()
+ header = re.findall(r'(?s)<[H|h].*?>(.*?)</[H|h]', txt)[0]
+ leader = re.findall(r'(?s)lead">(.*?)</p>', txt)[0]
+ text = re.findall(r'(?s)(.*?)', txt)[0].replace('<p>', '\n').replace('</p>', '')
+
+ dialog = xbmcgui.Dialog()
+ dialog.textviewer('[main.param1] - [main.param4]', header + '\n\n' + leader + '\n\n' + text)
+ return null
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+
+<item>
+<title>[COLOR cyan]ANF deutsch[/COLOR]</title>
+<link>$doregex[main]</link>
+
+<regex>
+<name>main</name>
+<listrepeat><![CDATA[
+<title>[COLOR cyan] [main.param1] - [main.param4] [/COLOR]</title>
+<link>no</link>
+<externallink>$doregex[text]</externallink>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+import HTMLParser
+import sys
+reload(sys)
+sys.setdefaultencoding("utf-8")
+def GetLSProData(page_data,Cookie_Jar,m):#vbprofi
+ parser = HTMLParser.HTMLParser()
+ s = re.sub("(&.+?;)", lambda m: parser.unescape(m.group()), page_data)
+ s1 = re.findall(r'(?s)<item>\n<title>(.*?)</title>\n<description>(.*?)</description>\n<link>(.*?)</link>\n<pubDate>(.*?)</pubDate>\n<guid>(.*?)</guid>\n</item>', s)
+
+ return s1
+]]></expres>
+<page>https://vbprofi.lima-city.de/rss/deutsch/index.php</page>
+<referer>https://vbprofi.lima-city.de/rss/deutsch/index.php</referer>
+<agent>Mozilla/5.0 (iPhone; CPU iPhone OS 9_2 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/47.0.2526.70 Mobile/13C71 Safari/601.1.46</agent>
+<cookieJar></cookieJar>
+<!--
+<Accept>text/html, application/xhtml+xml, image/jxr, */*</Accept>
+<Connection>keep-alive</Connection>
+<keep-alive></keep-alive>
+<noredirect>false</noredirect>
+<includeheaders/>
+-->
+</regex>
+
+<regex>
+<name>text</name>
+<expres><![CDATA[#$pyFunction
+import xbmcgui
+import re
+import HTMLParser
+
+def GetLSProData(page_data,Cookie_Jar,m):#vbprofi
+
+ txt = """'[main.param2]'"""
+ txt = txt.strip()
+ header = re.findall(r'(?s)<[H|h].*?>(.*?)</[H|h]', txt)[0]
+ leader = re.findall(r'(?s)lead">(.*?)</p>', txt)[0]
+ text = re.findall(r'(?s)(.*?)', txt)[0].replace('<p>', '\n').replace('</p>', '')
+
+ dialog = xbmcgui.Dialog()
+ dialog.textviewer('[main.param1] - [main.param4]', header + '\n\n' + leader + '\n\n' + text)
+ return null
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+
+
+
+<item>
+<title>[COLOR cyan]deutsche Sender Programmvorschau[/COLOR]</title>
+<link>$doregex[tag]</link>
+
+<regex>
+<name>tag</name>
+<listrepeat><![CDATA[
+<title>[tag.param2]</title>
+<link>$doregex[sender]</link>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#vbprofi
+ return re.findall('<OPTION.*?VALUE="(.*?)".*?>(.*?)</OPTION>', re.findall("ID='wochentag'(?s)(.*?)</SELECT><SELECT ID='sender'", page_data)[0])
+]]></expres>
+<page>https://www.hoerzu.de/text/tv-programm/sender.php</page>
+</regex>
+
+<regex>
+<name>sender</name>
+<listrepeat><![CDATA[
+<title>[sender.param2]</title>
+<link>$doregex[makelist]</link>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#vbprofi
+ return re.findall('<option value="(.*?)">(.*?)</option>', re.findall("ID='sender'(?s)(.*?)</SELECT><SELECT ID=\"tageszeit\"", page_data)[0])
+]]></expres>
+<page>https://www.hoerzu.de/text/tv-programm/sender.php</page>
+</regex>
+
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[makelist.param2]</title>
+<link>$doregex[info]</link>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#vbprofi
+# return re.findall('<h3>(?s)(.*?)</h3>', page_data)
+ return re.findall('href="(.*?)".*?>(.*?)</a>', page_data)
+]]></expres>
+<page>https://www.hoerzu.de/text/tv-programm/sender.php</page>
+<rawpost>timeday=ganztags&amp;submit=Anzeigen&amp;newday=[tag.param1]&amp;tvchannelid=[sender.param1]</rawpost>
+<cookieJar></cookieJar>
+</regex>
+
+<regex>
+<name>info</name>
+<expres><![CDATA[#$pyFunction
+import re
+import xbmcgui
+import xbmc
+def GetLSProData(page_data,Cookie_Jar,m):#vbprofi
+ txt = re.findall('<span class="tabtextbold">(?s)(.*?)<a href="', page_data)[0].replace('</span>', ' ').replace('<br/>', '\n').replace('<BR/>', '\n')
+ dialog = xbmcgui.Dialog()
+ dialog.textviewer('Programm-Information', cleanhtml(txt))
+# return null
+
+def cleanhtml(raw_html):
+ cleanr = re.compile('<.*?>')
+ cleantext = re.sub(cleanr, '\n', raw_html)
+ return cleantext.replace('&nbsp;', ' ')
+]]></expres>
+<page>https://www.hoerzu.de/text/tv-programm/[makelist.param1]</page>
+</regex>
+</item>
+
+
+<!--
+<item>
+<title>login</title>
+<link>n/a</link>
+<externallink>https://vbprofi.lima-city.de/xml3/login.xml</externallink>
+</item>
+-->
+
+
+
+
+</items>
