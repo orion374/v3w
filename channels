@@ -1,37 +1,90 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 
-<channels>
-    <channels_info> <!-- this is opitonal -->
-      <title>Testing XML</title> <!-- if channels_info, a title is required, other elements are optional -->
-      <genre>News</genre>
-      <description>this is the descripton string</description>
-      <thumbnail>http://community-links.googlecode.com/svn/icons/news-icon.png</thumbnail>
-      <fanart>http://community-links.googlecode.com/svn/icons/news-fanart.jpg</fanart>
-      <date>04.01.2013</date>
-      <credits>divingmule, Johnny Cache</credits>
-    </channels_info>
-    
-    <channel>
-    <name>News</name>
-    <thumbnail>http://community-links.googlecode.com/svn/icons/news-icon.png</thumbnail>
-    <fanart>http://community-links.googlecode.com/svn/icons/news-fanart.jpg</fanart>
-        <items>
-            <item>
-                <title>POKER CHANNEL</title>
-                <link>mms://some/place/pokerchannel</link>
-                <thumbnail>http://channel.png</thumbnail>
-                <genre>Poker</genre>
-                <info>The Poker Channel – Europe’s largest dedicated gaming TV network is available online to a global audience, and to more than 30 million cable and satellite homes in Europe and Latin America.</info>
-                <date>07.12.2011</date>  <!-- format - dd.mm.yyyy -->
-                <epg></epg>  <!-- See daschacka's post - http://forum.xbmc.org/showpost.php?p=936228&postcount=1076 -->
-                <fanart>http://fanart.jpg</fanart>
-            </item>
-            
-            <item>
-                <title>News 4</title>         
-                <link>rtmp://some/place playpath=some_place swfUrl="http://player.swf pageUrl=http://nhkworld/r/movie/ swfVfy=true live=true</link>
-                <thumbnail>C:\my_thumbs\news.png</thumbnail>
-            </item>
-        </items>
-    </channel>
+<items>
+
+<item>
+<title>[COLOR lime][COLOR  yellow]•• [/COLOR]VOD[COLOR  yellow] •[COLOR  cyan]  1[/COLOR]</title>
+<thumbnail>https://sogetel.000webhostapp.com/3-logo/vod.png</thumbnail>
+<link>ignoreme</link>
+<externallink>https://sogetel.000webhostapp.com/2-image/photo-1.png</externallink>
+</item>
+
+<item>
+<title>[COLOR lime][COLOR  yellow]••  [/COLOR]VOD[COLOR  yellow] •[COLOR  cyan] 2[/COLOR]</title>
+<thumbnail>https://sogetel.000webhostapp.com/3-logo/vod.png</thumbnail>
+<link>ignoreme</link>
+<externallink>https://sogetel.000webhostapp.com/2-image/photo-2.png</externallink>
+</item>
+
+<item>
+<title>[COLOR lime][COLOR  yellow]••  [/COLOR]VOD[COLOR  yellow] •[COLOR  cyan] 3[/COLOR]</title>
+<thumbnail>https://sogetel.000webhostapp.com/3-logo/vod.png</thumbnail>
+<link>ignoreme</link>
+<externallink>https://sogetel.000webhostapp.com/2-image/photo-3.png</externallink>
+</item>
+
+<item>
+<title>[COLOR lime][COLOR  yellow]••  [/COLOR]VOD[COLOR  yellow] •[COLOR  cyan] 4[/COLOR]</title>
+<thumbnail>https://sogetel.000webhostapp.com/3-logo/vod.png</thumbnail>
+<link>ignoreme</link>
+<externallink>https://sogetel.000webhostapp.com/2-image/photo-4.png</externallink>
+</item>
+
+<item>
+<title>[COLOR lime][COLOR  yellow]••  [/COLOR]VOD[COLOR  yellow] •[COLOR  cyan] 5[/COLOR]</title>
+<thumbnail>https://sogetel.000webhostapp.com/3-logo/vod.png</thumbnail>
+<link>ignoreme</link>
+<externallink>https://sogetel.000webhostapp.com/2-image/photo-5.png</externallink>
+</item>
+
+<item>
+<title>[COLOR lime][COLOR  yellow]••  [/COLOR]VOD[COLOR  yellow] •[COLOR  cyan] 6[/COLOR]</title>
+<thumbnail>https://sogetel.000webhostapp.com/3-logo/vod.png</thumbnail>
+<link>ignoreme</link>
+<externallink>https://sogetel.000webhostapp.com/2-image/photo-6.png</externallink>
+</item>
+
+<item>
+<title>[COLOR lime][COLOR  yellow]••  [/COLOR]VOD[COLOR  yellow] •[COLOR  cyan] 7[/COLOR]</title>
+<thumbnail>https://sogetel.000webhostapp.com/3-logo/vod.png</thumbnail>
+<link>ignoreme</link>
+<externallink>https://sogetel.000webhostapp.com/2-image/photo-7.png</externallink>
+</item>
+
+<item>
+<title>[COLOR lime][COLOR  yellow]••  [/COLOR]VOD[COLOR  yellow] •[COLOR  cyan] 8[/COLOR]</title>
+<thumbnail>https://sogetel.000webhostapp.com/3-logo/vod.png</thumbnail>
+<link>ignoreme</link>
+<externallink>https://sogetel.000webhostapp.com/2-image/photo-8.png</externallink>
+</item>
+
+<item>
+<title>[COLOR lime][COLOR  yellow]••  [/COLOR]VOD[COLOR  yellow] •[COLOR  cyan] 9[/COLOR]</title>
+<thumbnail>https://sogetel.000webhostapp.com/3-logo/vod.png</thumbnail>
+<link>ignoreme</link>
+<externallink>https://sogetel.000webhostapp.com/2-image/photo-9.png</externallink>
+</item>
+
+<item>
+<title>[COLOR lime][COLOR  yellow]••  [/COLOR]VOD[COLOR  yellow] •[COLOR  cyan] 10[/COLOR]</title>
+<thumbnail>https://sogetel.000webhostapp.com/3-logo/vod.png</thumbnail>
+<link>ignoreme</link>
+<externallink>https://sogetel.000webhostapp.com/2-image/photo-10.png</externallink>
+</item>
+
+<item>
+<title>[COLOR lime][COLOR  yellow]••  [/COLOR]VOD[COLOR  yellow] •[COLOR  cyan] 11[/COLOR]</title>
+<thumbnail>https://sogetel.000webhostapp.com/3-logo/vod.png</thumbnail>
+<link>ignoreme</link>
+<externallink>https://sogetel.000webhostapp.com/2-image/photo-11.png</externallink>
+</item>
+
+<item>
+<title>[COLOR lime][COLOR  yellow]••  [/COLOR]VOD[COLOR  yellow] •[COLOR  cyan] 12[/COLOR]</title>
+<thumbnail>https://sogetel.000webhostapp.com/3-logo/vod.png</thumbnail>
+<link>ignoreme</link>
+<externallink>https://sogetel.000webhostapp.com/2-image/photo-12.png</externallink>
+</item>
+
+</items>
   <channels>
