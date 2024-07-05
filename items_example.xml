@@ -1,36 +1,22 @@
 <items>
 <item>
-<title>radio flora – Das web-Radio aus Hannover</title>
+<title>CHANNELS</title>
 <link>https://radioflora.de:8443/stream/live192.mp3</link>
 <link>http://radioflora.de:8000/stream/live192.mp3</link>
 </item>
 
 <item>
-<title>Radyo Azadî auf FSK Hamburg 93,0MHz - Radio-Nachrichten von Kurdistan nach Hamburg und zurück</title>
+<title>MOVIES</title>
 <link>http://stream.fsk-hh.org:8000/fsk.mp3</link>
 </item>
 
 <item>
-<title>freies radio: Denge Welat - Jede Woche Sonntag 12:00 - 14:00</title>
+<title>RATUKEN</title>
 <link>http://streaming.fueralle.org:8000/frs-hi.mp3</link>
 </item>
 
 <item>
-<title>Radio Unerhört Marburg</title>
+<title>UFC</title>
 <link>http://stream.radio-rum.de:8000/rum.mp3</link>
-<info>Radio Unerhört Marburg e.V.
-
-Radio Unerhört Marburg ist das freie, nicht-kommerzielle Radio für Marburg und Umgebung und strahlt seit 1997 ein 24-Stunden-Programm in Marburg aus. Rund
-130 ehrenamtliche RedakteurInnen produzieren alternatives Radio in 7 verschiedenen Sprachen. Radio Unerhört Marburg fördert die kritische Auseinandersetzung
-mit gesellschaftlichen Problemen und räumt bevorzugt benachteiligten gesellschaftlichen Gruppen Sendezeit zur eigenen Gestaltung ein. Verschiedene kulturelle
-und politische Initiativen und Vereine machen selbst On-Air Öffentlichkeitsarbeit. 26 verschiedene Musiksendungen decken große stilistische Vielfalt ab
-- jenseits des Mainstreams. Radio Unerhört fördert zielgruppen-spezifisch Medienkompetenz und befähigt Interessierte zur selbstbewussten praktischen Medienarbeit.
-Radio Unerhört Marburg e.V. ist als gemeinnütziger Verein organisiert und wird von rund 350 Mitgliedern selbstverwaltet.
-
-Radio Unerhört Marburg hören: UKW: 90,1 MHz
-
-https://www.radio-rum.de/blog/
-</info>
 </item>
-
 </items>
